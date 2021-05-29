@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>School</title>
+    <style>
+        .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+</head>
+<body style="background-color:#009B77;">
+    
+    <h1 style="text-align:center;">Student Login</h1>
+
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/LoginView">View</a>
+      <a href="/AdminRegister">Register</a>
+      <a href="/Attendance">Attendance</a>
+      <a href="/Delete">Delete</a>
+      <a href="/Logout">Logout</a>
+    </div>
+  
+    <h1 style="text-align:center;">Please Enter Valid Id</h1>
+
+    <form method = "POST" action = "/LoginView1" style="margin-left:540px;margin-top:100px;margin-right:500px;">
+        {% csrf_token %}
+        <div >
+        <label> Student Id </label>
+        <input type="text" Name="stdid" placeholder="Enter Student Id" required style="margin-left:43px;"><br/><br/>
+        
+        <input type="submit" value="Login" style="margin-left:80px">
+    
+        </div>
+    
+        </form>
+
+
+</body>
+</html>
